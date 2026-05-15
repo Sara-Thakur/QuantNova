@@ -22,8 +22,8 @@ export function Header({ currentSection, onNavigate }: HeaderProps) {
     <header className="glass-header">
       <div className="header-container">
         {/* Brand Logo */}
-        <div 
-          className="header-brand" 
+        <div
+          className="header-brand"
           onClick={() => handleNavClick('Terminal')}
           style={{ cursor: 'pointer' }}
         >
@@ -45,12 +45,21 @@ export function Header({ currentSection, onNavigate }: HeaderProps) {
         </nav>
 
         {/* Mobile Hamburger Button */}
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             {isMobileMenuOpen ? (
               <>
                 <line x1="18" y1="6" x2="6" y2="18"></line>
