@@ -9,6 +9,7 @@ import {
 } from './api/client';
 import { CandleChart, ChartType } from './components/CandleChart';
 import { DataLoader } from './components/DataLoader';
+import { Header } from './components/Header';
 import sampleCandles from './data/sample-ohlcv.json';
 import { runMovingAverageCrossoverBacktest } from './backtest/movingAverageCrossover';
 import {
@@ -342,6 +343,8 @@ function App() {
   }
 
   return (
+    <>
+    <Header currentSection={section} onNavigate={setSection} />
     <main className="terminal-shell">
       <aside className="terminal-sidebar" aria-label="Primary navigation">
         <div className="brand-lockup">
@@ -509,6 +512,7 @@ function App() {
         {section === 'History' ? renderHistory() : null}
       </section>
     </main>
+    </>
   );
 
   function renderTerminal() {
